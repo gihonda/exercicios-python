@@ -1,24 +1,23 @@
 matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-spares = maior = scol = 0
+somapares = somacoluna = maior = 0
 for linha in range(0, 3):
     for coluna in range(0, 3):
         matriz[linha][coluna] = int(input(f"Digite um valor para a posicao [{linha},{coluna}]: "))
+        if matriz[linha][coluna] % 2 == 0:
+            somapares += matriz[linha][coluna]
 print("-=" * 30)
 for linha in range(0, 3):
     for coluna in range(0, 3):
         print(f"[{matriz[linha][coluna]:^5}]", end="")
-        if matriz[linha][coluna] % 2 == 0:
-            spares += matriz[linha][coluna]
     print()
 print("-=" * 30)
-
-print(f"a soma dos valores pares e {spares}")
+print(f"A soma dos pares e {somapares}")
 for linha in range(0, 3):
-    scol += matriz[linha][2]
-print(f"a soma da terceira coluna e {scol}")
+    somacoluna += matriz[linha][2]
+print(f"A soma da terceira coluna e {somacoluna}")
 for coluna in range(0, 3):
     if coluna == 0:
         maior = matriz[1][coluna]
     elif matriz[1][coluna] > maior:
         maior = matriz[1][coluna]
-print(f"O maior numero da segunda linha e o {maior}")
+print(f"O maior valor da segunda linha foi {maior}")
