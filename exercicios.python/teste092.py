@@ -1,7 +1,8 @@
+from datetime import datetime
 nome = str(input("Nome do funcionario: "))
 anos = int(input("Ano de nascimento: "))
 ctps = int(input("Carteira de trabalho (0 se nao tem): "))
-idade = 2026 - anos
+idade = datetime.now().year - anos
 funcionario = {"nome": nome, "idade": idade, "ctps": ctps}
 if ctps != 0:
     contratacao = int(input("Ano de contratacao: "))
