@@ -1,11 +1,12 @@
-aluno = {"nome": "", "media": 0, "situacao": ""}
+aluno = dict()
 aluno["nome"] = str(input("Nome: "))
 aluno["media"] = float(input(f"Media de {aluno["nome"]}: "))
 if aluno["media"] >= 7:
     aluno["situacao"] = "Aprovado"
+elif 5 <= aluno["media"] < 7:
+    aluno["situacao"] = "Recuperacao"
 else:
     aluno["situacao"] = "Reprovado"
 print("-=" * 25)
-print(f"Nome:{aluno['nome']}")
-print(f"Media: {aluno['media']}")
-print(f"Situacao: {aluno['situacao']}")
+for k, v in aluno.items():
+    print(f" - {k} e {v}")
