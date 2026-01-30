@@ -1,12 +1,12 @@
-print("="*40)
-print("10 TEMOS DE UMA PA".center(40))
-print("="*40)
-primeiro = int(input("Primeiro termo: "))
-razao = int(input("razao: "))
+print("=" * 40)
+print("10 TERMOS DE UMA PA".center(40))
+print("=" * 40)
+primeiro = int(input("Digite o primeiro termo: "))
+razao = int(input("Digite a razao: "))
 termo = primeiro
-c = 1
-while c <= 10:
-    print(f"{termo} -> ",end="")
+cont = 1
+while cont <= 10:
+    print(f"{termo} -> ", end="")
     termo += razao
-    c += 1
-print("FIM")
+    cont += 1
+print(">>> FIM <<<")
